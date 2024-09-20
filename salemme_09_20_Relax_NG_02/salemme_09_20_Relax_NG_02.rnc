@@ -1,0 +1,9 @@
+start = root
+root = element root {title, topicTitle, section+}
+    title = element title {text}
+    topicTitle = element topicTitle {text}
+    section = element section {num, (nl | \list)*}
+        num = attribute num {xsd:int}
+        nl = element nl {text}
+        \list = element list {item+}
+            item = element item {num, text}

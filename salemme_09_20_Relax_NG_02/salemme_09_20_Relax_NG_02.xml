@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?xml-model href="salemme_09_20_Relax_NG_02.rnc" type="application/relax-ng-compact-syntax"?>
+
+<root>
+    <title>Lecture 3 </title>
+
+
+    <topicTitle>What is a Map Projection? </topicTitle>
+
+    <section num="1">
+        <nl>a method of representing the earth’s three-dimensional surface as a flat two-dimensional
+            surface </nl>
+
+        <nl>Mathematically convert geographic (latitude and longitude) coordinates into planar
+            Cartesian (x,y) coordinates </nl>
+
+        <nl>What do we need to know? </nl>
+
+        <list>
+            <item num="1">Projections are mathematical transformations </item>
+
+            <item num="2">scale is true only in certain places</item>
+
+            <item num="3">many different types have been devised </item>
+            <item num="4">all map projections distort </item>
+
+            <item num="5">distortion characteristics vary from type to type</item>
+
+            <item num="6">some types are better for some applications than others </item>
+
+            <item num="7">a few types are used widely </item>
+        </list>
+
+    </section>
+
+    <section num="2">
+        <nl>3 Common Projections – on exam </nl>
+
+        <list>
+            <item num="1">Cylinder (cylindrical projection) - tangent, line </item>
+
+            <item num="2">Cone (conic projection) - secant </item>
+
+            <item num="3">Plane (planer or azimuthal projection) - tangent, point </item>
+        </list>
+
+        <nl>tangent – being in contact at a single point or along a line </nl>
+
+        <nl>secant – cutting, intersecting </nl>
+
+
+
+        <nl>the term “map projection” comes from the concept of projecting a light source through
+            the earth’s surface onto a two-dimensional surface (a map) </nl>
+        <nl>Cylindrical projections are created by wrapping a cylinder around a globe and projecting
+            a light source through the globe onto the cylinder. The cylinder is the cut along a line
+            of longitude and laid flat </nl>
+
+
+        <nl>[something something] transformations – points, lines, etc., on the curved surface of
+            Earth are rendered onto a flat map surface. </nl>
+        <nl>Plante versus spherical (“geographic” coordinates” </nl>
+        <nl>... can we easily, conveniently, sensibly calculate length and area in degrees of
+            longitude and latitude? </nl>
+    </section>
+
+
+
+    <section num="3">
+        <nl>Spherical coordinates: </nl>
+
+        <nl>Latitude ranges from 90d North to –90d South </nl>
+
+        <nl>Longitude ranges from 0d to 180d East and from 0d to 180w</nl>
+
+        <nl>As latitude increases, the length of parallels decreases to zero at the poles. In other
+            words, a length of 360d of longitude is different at different latitudes </nl>
+
+        <nl>AKA lines of longitude are not parallel, they converge at the poles. So, while a degree
+            of longitude at the equator is equal to a distance of about 111 kilometers...</nl>
+
+        <nl>A map projection converts spherical coordinates to plane coordinates </nl>
+
+        <nl>Scale is only true where the surface contacts the globe </nl>
+
+        <nl>The red lines (standard lines) and the point are where scale is true on the resulting
+            map.</nl>
+
+        <nl>Scale is increasingly distorted with increasing distance away from the lines or points
+            of tangency</nl>
+    </section>
+
+
+</root>
