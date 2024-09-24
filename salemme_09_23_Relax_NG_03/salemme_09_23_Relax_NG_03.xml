@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--This tutorial is from gamermaker.io: https://gamemaker.io/en/tutorials/make-arcade-space-shooter-->
+
+<?xml-model href="salemme_09_23_Relax_NG_03.rnc" type="application/relax-ng-compact-syntax"?>
+<root>
+    <title>Make Your Own Arcade Space Shooter</title>
+
+    <sect num="0">
+        <body>
+            <nl>We’ll build this game in three simple steps:</nl>
+            <list>
+                <step num="1">Program the ship to move</step>
+                <step num="2">Make space rocks explode</step>
+                <step num="3">Finish your game</step>
+            </list>
+            <nl>Download GameMaker <link>https://gamemaker.io/en/account</link> and let’s
+                begin!</nl>
+            <link>https://youtu.be/nwlvT-L9vFg</link>
+            <nl>[ 1 Move Your Ship / 2 Destroy Rocks / 3 Finish Your Game ] </nl>
+        </body>
+
+    </sect>
+
+
+    <sect num="1">
+        <head>How to Create a New Project</head>
+        <body>
+            <nl>Open GameMaker. You'll see a “New” button – click on it.</nl>
+            <nl> Here you can start with a blank project, or choose a template.</nl>
+            <nl>For this game, let's use the "Space Rocks" template. This gives you all the images
+                for this tutorial.</nl>
+            <nl>Enter a "Project Name", and hit "Let's Go!".</nl>
+            <nl>You're now in your project!</nl>
+            <nl>The Asset Browser on the right contains all your assets. You'll now see four
+                Sprites, which are images you can use in your game. </nl>
+            <nl>There’s “spr_player”, the ship you’ll fly, “spr_bullet”, which you’ll fire from your
+                ship, and two rocks, which you’ll destroy.</nl>
+        </body>
+    </sect>
+
+    <sect num="2">
+        <head>How to Use The Asset Browser</head>
+        <body>
+            <nl>In the same Asset Browser, we want to create some objects. An object is how you
+                bring an image to life, by programming it to move, shoot, or do anything you need it
+                to.</nl>
+            <nl>Your ship, rocks, and even the bullets you fire are created as objects. We’ll put
+                these in the “Objects” group in the Asset Browser, which is currently empty.</nl>
+            <nl>Right-click on the “Objects” group, and select “Create -> Object”. Change its name
+                from “Object1” to “obj_player”.</nl>
+            <nl>Press F2 to rename your selected object, or right-click on it and select
+                “Rename”.</nl>
+        </body>
+    </sect>
+
+    <sect num="3">
+        <head>How to Edit an Object</head>
+        <body>
+            <nl>Your new object has an editor. Here you change its properties, and program it, which
+                we’ll do very soon.</nl>
+            <nl>Every object needs a sprite – otherwise how would you see it? </nl>
+            <nl>Click where it says “No Sprite”, and from under the “Sprites” group, select
+                spr_player.</nl>
+            <nl>We need some more objects now. Just like you created obj_player, create three more
+                objects:</nl>
+            <list>
+                <step num="1">obj_bullet: This is the bullet your ship fires. Set the sprite to
+                    spr_bullet.</step>
+                <step num="2">obj_rock: This is the rock you’ll destroy. Set the sprite to
+                    spr_rock_big, as every rock will start big, and shrink as you shoot it.</step>
+                <step num="3">obj_game: This is a “silent” object that will manage your game. It
+                    doesn’t need a sprite.</step>
+            </list>
+            <nl>These are all the objects you need! Let’s now place these inside a level.</nl>
+        </body>
+    </sect>
+
+    <sect num="4">
+        <head>How to Make a Level in GameMaker</head>
+        <body>
+            <nl>Each “level” in GameMaker is a room asset. Look in the Asset Browser – there’s one
+                already there for you: </nl>
+            <nl>Double-click on it. The “Room Editor” will open, where you’ll build your level.</nl>
+            <nl>Before doing anything, I want to resize the room to make it a 1000x1000 square.</nl>
+        </body>
+    </sect>
+
+    <sect num="5">
+        <head>How to Resize a Room in GameMaker</head>
+        <body>
+            <nl>Look at the lower-left corner of the window - you'll see an "Inspector" window.</nl>
+            <nl> Here, set the Width and Height of the room to 1000. You can use a different
+                size.</nl>
+            <nl>If you don't see these options, go into your Asset Browser and click on Room1. They
+                should be visible while the room is selected.</nl>
+        </body>
+    </sect>
+    
+    <sect num="6">
+        <head>How to Place Objects in a Room</head>
+        <body>
+            <nl>Look at the left panel in the Room Editor: there are two layers created by default,
+                “Instances” and “Background”. </nl>
+            <list>
+                <step num="1">Instances: This is an instance layer. Your objects go here, just like
+                    cereal goes into a bowl.</step>
+                <step num="2"> Background: This is a background layer. Change the background colour
+                    or apply an image.</step>
+            </list>
+            <nl>Click on the “Instances” layer to select it – this is where your objects will
+                go:</nl>
+            <nl> From the Asset Browser, drag obj_player and place it in the room. </nl>
+            <nl>Your player ship is in the room now, as an “instance” – you can place multiple
+                “instances” of any object in the room!</nl>
+            <nl>Do this with the rocks – drag obj_rock into the room multiple times, until you have
+                around six instances:</nl>
+            <nl>The stage is set for the play. We just need to teach the actors their roles.</nl>
+        </body>
+    </sect>
+</root>

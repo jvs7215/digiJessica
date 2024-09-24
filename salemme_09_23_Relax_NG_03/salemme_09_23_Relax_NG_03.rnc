@@ -1,0 +1,12 @@
+start = root
+root = element root {title, sect+}
+    title = element title {text}
+    sect = element sect {(head | body)*, num}
+        head = element head {text}
+        body = element body {mixed {(\list | nl | link)}*}
+        \list = element list {step+}
+            step = element step {num, mixed{(link)*}}
+                num = attribute num {xsd:int}
+        nl = element nl {mixed {(link)*}}
+            link = element link {xsd:anyURI}
+    
